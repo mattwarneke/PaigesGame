@@ -13,12 +13,14 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -220,20 +222,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Code\CameraFollow.cs" />
+    <Compile Include="Assets\Code\CollectableBounce.cs" />
+    <Compile Include="Assets\Code\Door.cs" />
+    <Compile Include="Assets\Code\Enums\MoveAnimDirection.cs" />
+    <Compile Include="Assets\Code\FadeScript.cs" />
+    <Compile Include="Assets\Code\MenuButtons.cs" />
+    <Compile Include="Assets\Code\Enums\MoveInputDirection.cs" />
+    <Compile Include="Assets\Code\PlayerMovement.cs" />
+    <Compile Include="Assets\Code\SpikeTrap.cs" />
+    <Compile Include="Assets\Code\Tile.cs" />
+    <Compile Include="Assets\Code\TimedAnimations.cs" />
+    <Compile Include="Assets\Code\Trigger.cs" />
     <Compile Include="Assets\FantasyMonsters\Scripts\MonsterAnimationManager.cs" />
     <Compile Include="Assets\FantasyMonsters\Scripts\MonsterCollection.cs" />
     <Compile Include="Assets\FantasyMonsters\Scripts\MonsterCollectionRefresh.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\CollectableBounce.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\Door.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\FadeScript.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\MenuButtons.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\SpikeTrap.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\Tile.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\TimedAnimations.cs" />
-    <Compile Include="Assets\HyperLuminal\2D Fantasy Forest Tileset\Scripts\Trigger.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>
