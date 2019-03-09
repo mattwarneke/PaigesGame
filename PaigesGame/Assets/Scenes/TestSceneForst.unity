@@ -6254,6 +6254,32 @@ GameObject:
   m_PrefabParentObject: {fileID: 1956314262535556, guid: 46500b538c43beb4681c8c83ba95c540,
     type: 2}
   m_PrefabInternal: {fileID: 765943455}
+--- !u!320 &453702563
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 453702557}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: ffaee1daacdcd4242a49d14bd8b6a66a, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 453702557}
+  - key: {fileID: 0}
+    value: {fileID: 453702557}
+  - key: {fileID: 0}
+    value: {fileID: 453702557}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 453702557}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &457150923
 Prefab:
   m_ObjectHideFlags: 0
