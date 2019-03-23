@@ -19,7 +19,7 @@ public class Tile : MonoBehaviour
 	void Start () 
 	{
 		// obtain the local references
-		playerTransform = GameObject.Find("PlayerCharacter").transform;
+		playerTransform = GameObject.Find("Jojo").transform;
 		spriteRenderer = this.GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
             spriteRenderer = this.GetComponentInChildren<SpriteRenderer>();

@@ -64,6 +64,8 @@ namespace Assets.Code
 
         public Rigidbody2D body;
 
+        public bool isTimeLinePlaying = false;
+
         void OnStart()
         {
         }
@@ -118,6 +120,9 @@ namespace Assets.Code
         // Update is called once per frame
         void Update()
         {
+
+            if (isTimeLinePlaying)
+                return;
             MoveInputDirection directionX;
             MoveInputDirection directionY;
             Vector3? inputPosition = GetInputPosition();
@@ -139,29 +144,7 @@ namespace Assets.Code
 
             // 4 - Movement per direction
             movement = new Vector2(xMovement, yMovement);
-                        
-            //if (directionX == MoveInputDirection.WalkRight)
-            //{
-                //animator.SetInteger("Direction", (int)MoveAnimDirection.WalkRight);
-                //animator.speed = 0.5f;
-            //}
-            //else if (directionX == MoveInputDirection.WalkLeft)
-            //{
-                //animator.SetInteger("Direction", (int)MoveAnimDirection.WalkLeft);
-                //animator.speed = 0.5f;
-            //}
             
-            //if (directionY == MoveInputDirection.WalkUp)
-            //{
-                //animator.SetInteger("Direction", (int)MoveAnimDirection.WalkUp);
-                //animator.speed = 0.35f;
-            //}
-            //else if (directionY == MoveInputDirection.WalkDown)
-            //{
-                //animator.SetInteger("Direction", (int)MoveAnimDirection.WalkDown);
-                //animator.speed = 0.35f;
-            //}
-
             body.velocity = movement;
 
             if (directionX == MoveInputDirection.WalkRight && isFacingLeft)
@@ -195,33 +178,19 @@ namespace Assets.Code
         public void FlipRight()
         {
             isFacingLeft = false;
-            //CharacterBody.transform.rotation.z = 180;
             this.transform.Rotate(0, 180, 0);
-            //foreach (SpriteRenderer sprite in AllChildSprites)
-            //    sprite.flipY = true;
-            //float newX = CharacterBody.transform.localPosition.x * -1;
-            //CharacterBody.transform.localPosition =
-            //    new Vector3(newX,
-            //        CharacterBody.transform.localPosition.y,
-            //        CharacterBody.transform.localPosition.z);
-            //Vector3 eulerAngles = CharacterBody.transform.localEulerAngles;
-            //// rotate on y
-            //CharacterBody.transform.localEulerAngles =
-            //    new Vector3(eulerAngles.x,
-            //        (eulerAngles.y == 180 ? 0 : 180),
-            //        eulerAngles.z);
         }
 
         public void FlipLeft()
         {
             isFacingLeft = true;
             this.transform.Rotate(0, 180, 0);
-            //foreach (SpriteRenderer sprite in AllChildSprites)
-            //    sprite.flipY = false;
         }
 
         void FixedUpdate()
         {
+            if (isTimeLinePlaying)
+                return;
             // 5 - Move the game object
             body.velocity = movement;
         }
