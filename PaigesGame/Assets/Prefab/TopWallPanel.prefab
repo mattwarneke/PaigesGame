@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4730222301232216}
   - component: {fileID: 212562405046270036}
   - component: {fileID: 61844822258293784}
-  - component: {fileID: 114337999580638466}
+  - component: {fileID: 114373521786586784}
   m_Layer: 0
   m_Name: TopWallPanel
   m_TagString: LargeTile
@@ -35,9 +35,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1287575838440490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.5, y: 9, z: 0}
-  m_LocalScale: {x: 1.6666666, y: 1.2, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.5, y: 20.5, z: 0}
+  m_LocalScale: {x: 1.66667, y: 1.1999999, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,7 +54,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.44308168}
+  m_Offset: {x: 0, y: 0.7049769}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -65,15 +65,15 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.8382559}
+  m_Size: {x: 0.6, y: 0.66365886}
   m_EdgeRadius: 0
---- !u!114 &114337999580638466
+--- !u!114 &114373521786586784
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1287575838440490}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22db20d75c10b2c47b416678db57a3f4, type: 3}
   m_Name: 
@@ -109,9 +109,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1234569295
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -2129676705
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300292, guid: 7cf2324a869c84179b1d4273fef7690d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

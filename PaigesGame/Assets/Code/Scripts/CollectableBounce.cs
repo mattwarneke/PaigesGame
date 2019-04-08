@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Code.Logic;
 
 public class CollectableBounce : MonoBehaviour 
 {
@@ -28,7 +29,8 @@ public class CollectableBounce : MonoBehaviour
 	void Start ()
 	{
 		StartingScale = transform.localScale.x;
-	}
+        GameService.Instance().AddCollectable();
+    }
 
 	// Update is called once per frame
 	void Update ()
@@ -64,7 +66,8 @@ public class CollectableBounce : MonoBehaviour
 	{
 		if(collider.gameObject.name == "PlayerCharacter")
 		{
-			Destroy(gameObject);
+            GameService.Instance().RemoveCollectable();
+            Destroy(gameObject);
 		}
 	}
 }
