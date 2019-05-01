@@ -1,12 +1,8 @@
-﻿using Assets.Code.GUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
-
-namespace Assets.Code.Logic
+﻿namespace Assets.Code.Logic
 {
+    using Assets.Code.GUI;
+    using UnityEngine;
+
     public class GameService
     {
         private static GameService _instance;
@@ -36,8 +32,31 @@ namespace Assets.Code.Logic
             CollectableCount--;
             if (CollectableCount == 0)
             {
-                // do something.. free the jar.
+                //GuiController.RemoveJar();
+                //GuiController.RemoveBedroomDoor();
             }
+        }
+        
+        // should check out bevwizz event handling and see if can reproduce that, unity might be abke to choose the event class....
+        // should not be a string.. enum is better but w.e for now..
+        public void HandleEvent(string eventString)
+        {
+            switch (eventString)
+            {
+                case ("MattFreeFromJar"):
+                    FreeMattFromJar();
+                    break;
+                case ("MattFollowJoJo"):
+                    GuiController.SetMattFollowJojo();
+                    break;
+                default:
+                    return;
+            }
+        }
+
+        public void FreeMattFromJar()
+        {
+            GuiController.RemoveJar();
         }
     }
 }

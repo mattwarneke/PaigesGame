@@ -46,27 +46,30 @@ public class CollectableBounce : MonoBehaviour
 		}
 
 		// limit the scale in both directions
-		if(ScaleXY > 1.15f)
+		if(ScaleXY > 1.2f)
 		{
 			ScaleDirection = SCALEDIRECTION.DOWN;
-			ScaleXY = 1.15f;
+			ScaleXY = 1.2f;
 		}
 		
-		if(ScaleXY < 0.85f)
+		if(ScaleXY < 0.8f)
 		{
 			ScaleDirection = SCALEDIRECTION.UP;
-			ScaleXY = 0.85f;
+			ScaleXY = 0.8f;
 		}
 
 		// apply the scale factor
 		transform.localScale = new Vector3(StartingScale * ScaleXY, StartingScale * ScaleXY, transform.localScale.z);
 	}
 
+    public string eventRaisedOnDestroy;
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		if(collider.gameObject.name == "PlayerCharacter")
 		{
             GameService.Instance().RemoveCollectable();
+            if (!string.IsNullOrEmpty(eventRaisedOnDestroy))
+                GameService.Instance().HandleEvent(eventRaisedOnDestroy);
             Destroy(gameObject);
 		}
 	}

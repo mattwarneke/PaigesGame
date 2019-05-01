@@ -52,12 +52,14 @@ namespace Assets.Code
             CheckPointPosition = transform.position;
 
             AllChildSprites = this.GetComponentsInChildren<SpriteRenderer>().ToList();
+            
+            FlipRight();
         }
 
         /// <summary>
         /// 1 - The speed of the ship
         /// </summary>
-        public Vector2 speed = new Vector2(1f, 1f);
+        public Vector2 speed = new Vector2(0.8f, 0.8f);
 
         // 2 - Store the movement
         private Vector2 movement;
@@ -77,8 +79,7 @@ namespace Assets.Code
                 && Application.platform != RuntimePlatform.WebGLPlayer)
             {
                 Touch touch = Input.GetTouch(0);
-                //touch.position
-                return new Vector3(0, 0, 0);
+                return Camera.main.ScreenToWorldPoint(touch.position);
             }
             else if (Input.GetMouseButton(0))
             {
@@ -131,7 +132,6 @@ namespace Assets.Code
                 List<MoveInputDirection> inputDirections = getDirectionToInput(inputPosition.Value);
                 directionX = inputDirections[0];
                 directionY = inputDirections[1];
-
             }
             else
             {
