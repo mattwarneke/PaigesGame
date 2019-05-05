@@ -1,19 +1,16 @@
 ﻿using Assets.Code.Enums;
 using Assets.Code.Logic;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 namespace Assets.Code
 {
-    public class PlayerMovement : MonoBehaviour
+    public class PlayerJojo : MonoBehaviour
     {
         #region Member Variables
-        /// <summary>
-        /// Player movement speed
-        /// </summary>
-        private float movementSpeed = 0.25f;
 
         /// <summary>
         /// Animation state machine local reference
@@ -56,6 +53,71 @@ namespace Assets.Code
             FlipRight();
         }
 
+        // Update is called once per frame
+        void Update()
+        {
+            if (paused)
+                return;
+
+            if (IsScriptedActionPlaying)
+            {
+                animator.SetFloat("WalkSpeed", 2f);
+                MoveToForActionScripted();
+                return;
+            }
+            MoveInputDirection directionX;
+            MoveInputDirection directionY;
+            Vector3? inputPosition = GetInputPosition();
+            if (inputPosition.HasValue)
+            {
+                List<MoveInputDirection> inputDirections = getDirectionToInput(inputPosition.Value);
+                directionX = inputDirections[0];
+                directionY = inputDirections[1];
+            }
+            else
+            {
+                directionX = InputCalculator.MovementInputX(Input.GetAxis("Horizontal"));
+                directionY = InputCalculator.MovementInputY(Input.GetAxis("Vertical"));
+            }
+
+            float xMovement = (speed.x * (float)directionX) * 5f;
+            float yMovement = (speed.y * (float)directionY) * 5f;
+
+            // 4 - Movement per direction
+            movement = new Vector2(xMovement, yMovement);
+
+            body.velocity = movement;
+
+            if (directionX == MoveInputDirection.WalkRight && isFacingLeft)
+            {
+                FlipRight();
+            }
+            else if (directionX == MoveInputDirection.WalkLeft && !isFacingLeft)
+            {
+                FlipLeft();
+            }
+
+            if (directionX == MoveInputDirection.NoMovement
+                && directionY == MoveInputDirection.NoMovement)
+            {
+                // we aren't moving so make sure we dont animate
+                //animator.speed = 0.0f;
+                animator.SetFloat("WalkSpeed", 0f);
+            }
+            else
+            {
+                //animator.speed = 2f;
+                animator.SetFloat("WalkSpeed", 2f);
+            }
+
+            // if we are dead do not move anymore
+            if (isDead == true)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
+                animator.speed = 0.0f;
+            }
+        }
+
         /// <summary>
         /// 1 - The speed of the ship
         /// </summary>
@@ -66,10 +128,11 @@ namespace Assets.Code
 
         public Rigidbody2D body;
 
-        public bool isTimeLinePlaying = false;
+        public bool IsScriptedActionPlaying { get; set; }
 
         void OnStart()
         {
+            IsScriptedActionPlaying = false;
         }
 
         private Vector3? GetInputPosition()
@@ -88,8 +151,7 @@ namespace Assets.Code
 
             return null;
         }
-
-
+        
         private List<MoveInputDirection> getDirectionToInput(Vector3 inputPosition)
         {
             List<MoveInputDirection> inputDirections = new List<MoveInputDirection>();
@@ -118,63 +180,6 @@ namespace Assets.Code
             return inputDirections;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-            if (isTimeLinePlaying)
-                return;
-            MoveInputDirection directionX;
-            MoveInputDirection directionY;
-            Vector3? inputPosition = GetInputPosition();
-            if (inputPosition.HasValue)
-            {
-                List<MoveInputDirection> inputDirections = getDirectionToInput(inputPosition.Value);
-                directionX = inputDirections[0];
-                directionY = inputDirections[1];
-            }
-            else
-            {
-                directionX = InputCalculator.MovementInputX(Input.GetAxis("Horizontal"));
-                directionY = InputCalculator.MovementInputY(Input.GetAxis("Vertical"));
-            }
-
-            float xMovement = (speed.x * (float)directionX) * 5f;
-            float yMovement = (speed.y * (float)directionY) * 5f;
-
-            // 4 - Movement per direction
-            movement = new Vector2(xMovement, yMovement);
-            
-            body.velocity = movement;
-
-            if (directionX == MoveInputDirection.WalkRight && isFacingLeft)
-            {
-                FlipRight();
-            }
-            else if (directionX == MoveInputDirection.WalkLeft && !isFacingLeft)
-            {
-                FlipLeft();
-            }
-
-            if (directionX == MoveInputDirection.NoMovement
-                && directionY == MoveInputDirection.NoMovement)
-            {
-                // we aren't moving so make sure we dont animate
-                animator.speed = 0.0f;
-            }
-            else
-            {
-                animator.speed = 2f;
-            }
-
-            // if we are dead do not move anymore
-            if (isDead == true)
-            {
-                GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
-                animator.speed = 0.0f;
-            }
-        }
-
         public void FlipRight()
         {
             isFacingLeft = false;
@@ -189,10 +194,41 @@ namespace Assets.Code
 
         void FixedUpdate()
         {
-            if (isTimeLinePlaying)
+            if (IsScriptedActionPlaying)
                 return;
             // 5 - Move the game object
             body.velocity = movement;
+        }
+
+        public void StartPlayBedroomEnter(Transform transform)
+        {
+            moveToTransform = transform;
+            this.IsScriptedActionPlaying = true;
+            StartCoroutine(PauseMovement(3));
+        }
+
+        Transform moveToTransform;
+        public void MoveToForActionScripted()
+        {
+            bool isMinDistanceFromTarget =
+                Math.Abs(this.transform.position.x - this.moveToTransform.position.x) <= 0.5
+                || Math.Abs(this.transform.position.y - this.moveToTransform.position.y) <= 0.5;
+            if (isMinDistanceFromTarget)
+            {
+                PlaySwipAnimation();
+                IsScriptedActionPlaying = false;
+                return;
+            }
+
+            this.transform.position = Vector2.Lerp(this.transform.position, this.moveToTransform.position, Time.deltaTime/2);
+        }
+
+        bool paused = false;
+        IEnumerator PauseMovement(float pausedTime)
+        {
+            paused = true;
+            yield return new WaitForSeconds(pausedTime);
+            paused = false;
         }
 
         void OnTriggerEnter2D(Collider2D collider)
@@ -217,6 +253,11 @@ namespace Assets.Code
             // if we hit a dangerous tile then we are dead so go to the checkpoint position that was last saved
             transform.position = CheckPointPosition;
             isDead = false;
+        }
+
+        public void PlaySwipAnimation()
+        {
+            animator.SetTrigger("attack");
         }
     }
 }

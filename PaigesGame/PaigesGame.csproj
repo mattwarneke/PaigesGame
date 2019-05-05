@@ -221,12 +221,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\Characters\MattScript.cs" />
+    <Compile Include="Assets\Code\Characters\PlayerJojo.cs" />
     <Compile Include="Assets\Code\Enums\MoveAnimDirection.cs" />
     <Compile Include="Assets\Code\Enums\MoveInputDirection.cs" />
     <Compile Include="Assets\Code\GUI\GuiController.cs" />
     <Compile Include="Assets\Code\GUI\SpeechBubble.cs" />
+    <Compile Include="Assets\Code\Logic\EventEnum.cs" />
     <Compile Include="Assets\Code\Logic\GameService.cs" />
     <Compile Include="Assets\Code\Logic\InputCalculator.cs" />
+    <Compile Include="Assets\Code\Logic\SpeechRepository.cs" />
     <Compile Include="Assets\Code\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Code\Scripts\CollectableBounce.cs" />
     <Compile Include="Assets\Code\Scripts\CutScenePlayer.cs" />
@@ -234,7 +237,6 @@
     <Compile Include="Assets\Code\Scripts\FadeScript.cs" />
     <Compile Include="Assets\Code\Scripts\GenericDialog.cs" />
     <Compile Include="Assets\Code\Scripts\MenuButtons.cs" />
-    <Compile Include="Assets\Code\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Code\Scripts\SpikeTrap.cs" />
     <Compile Include="Assets\Code\Scripts\Tile.cs" />
     <Compile Include="Assets\Code\Scripts\TimedAnimations.cs" />

@@ -29,34 +29,38 @@
 
         public void RemoveCollectable()
         {
+            GuiController.JoJoSwipAnimation();
             CollectableCount--;
             if (CollectableCount == 0)
             {
                 //GuiController.RemoveJar();
-                //GuiController.RemoveBedroomDoor();
+                GuiController.RemoveBedroomDoor();
             }
         }
         
-        // should check out bevwizz event handling and see if can reproduce that, unity might be abke to choose the event class....
-        // should not be a string.. enum is better but w.e for now..
-        public void HandleEvent(string eventString)
+        public void HandleEvent(EventEnum eventTriggered)
         {
-            switch (eventString)
+            switch (eventTriggered)
             {
-                case ("MattFreeFromJar"):
-                    FreeMattFromJar();
-                    break;
-                case ("MattFollowJoJo"):
+                case (EventEnum.MattFollowJoJo):
                     GuiController.SetMattFollowJojo();
+                    GuiController.MattSpeak(SpeechRepository.GetMattFollowJoJoSpeech());
+                    break;
+                case (EventEnum.NearDoor):
+                    if (CollectableCount > 1)
+                        GuiController.MattSpeak(SpeechRepository.GetNearDoorSpeechNoneCollected());
+                    else if (CollectableCount == 1)
+                        GuiController.MattSpeak(SpeechRepository.GetNearDoorSpeechOneMore());
+                    else
+                        return;
+                    break;
+                case (EventEnum.EnterBedroom):
+                    GuiController.MattSpeak(SpeechRepository.GetEnterBedroomSpeech());
+                    GuiController.EnterBedroom();
                     break;
                 default:
                     return;
             }
-        }
-
-        public void FreeMattFromJar()
-        {
-            GuiController.RemoveJar();
         }
     }
 }

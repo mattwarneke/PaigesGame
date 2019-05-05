@@ -62,15 +62,16 @@ public class CollectableBounce : MonoBehaviour
 		transform.localScale = new Vector3(StartingScale * ScaleXY, StartingScale * ScaleXY, transform.localScale.z);
 	}
 
-    public string eventRaisedOnDestroy;
+    public EventEnum eventRaisedOnDestroy;
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		if(collider.gameObject.name == "PlayerCharacter")
 		{
             GameService.Instance().RemoveCollectable();
-            if (!string.IsNullOrEmpty(eventRaisedOnDestroy))
-                GameService.Instance().HandleEvent(eventRaisedOnDestroy);
-            Destroy(gameObject);
-		}
+            GameService.Instance().HandleEvent(eventRaisedOnDestroy);
+            Destroy(gameObject, 0.5f);//animator.GetCurrentAnimatorStateInfo(0).length // for death animations...
+        }
 	}
+
+
 }
