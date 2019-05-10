@@ -14,7 +14,7 @@ namespace Assets.Code.Logic
             {
                 new Speech("There you are JoJo!", 2.5f),
                 new Speech("I have been looking for you, I need your help.", 3.25f),
-                new Speech("Paige is trapped in the bedroom, we need to free her!", 3.25f)
+                new Speech("Paige is trapped in the bedroom, we need to free her!", 4f)
             };
         }
 
@@ -50,6 +50,22 @@ namespace Assets.Code.Logic
             {
                 new Speech("Damn, couldn't break it?", 2),
                 new Speech("Then I think I have an idea!", 2)
+            };
+        }
+
+        public static List<Speech> GetDemonDied(int demonsLeft)
+        {
+            return new List<Speech>()
+            {
+                new Speech("Wow, didn't expect that. Well done, only " + demonsLeft + " demons left!", 2)
+            };
+        }
+
+        public static List<Speech> GetNoMoreDemons()
+        {
+            return new List<Speech>()
+            {
+                new Speech("Nice one Jojo, no more demons the door is open." + Environment.NewLine + "Let's save Paige!", 2)
             };
         }
     }

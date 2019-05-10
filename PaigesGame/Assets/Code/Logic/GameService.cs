@@ -59,6 +59,12 @@
                     GuiController.MattSpeak(SpeechRepository.GetEnterBedroomSpeech());
                     GuiController.EnterBedroom();
                     break;
+                case (EventEnum.DemonKilled):
+                    if (CollectableCount > 0)
+                        GuiController.MattSpeak(SpeechRepository.GetDemonDied(CollectableCount));
+                    else
+                        GuiController.MattSpeak(SpeechRepository.GetNoMoreDemons());
+                    break;
                 default:
                     return;
             }

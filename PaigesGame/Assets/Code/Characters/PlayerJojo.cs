@@ -258,6 +258,7 @@ namespace Assets.Code
 
         public void PlaySwipAnimation()
         {
+            StartCoroutine(PauseMovement(0.25f));
             animator.SetTrigger("attack");
         }
     }

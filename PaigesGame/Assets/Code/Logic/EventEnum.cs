@@ -10,6 +10,7 @@ namespace Assets.Code.Logic
         NoEvent,
         MattFollowJoJo,
         NearDoor,
-        EnterBedroom
+        EnterBedroom,
+        DemonKilled
     }
 }

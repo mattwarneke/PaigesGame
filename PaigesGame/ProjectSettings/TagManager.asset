@@ -50,3 +50,6 @@ TagManager:
   - name: TreeLayer
     uniqueID: 2165290591
     locked: 0
+  - name: Speech
+    uniqueID: 1331450951
+    locked: 0

@@ -28,7 +28,7 @@ namespace Assets.Code.GUI
         {
             MattScript.Speak(speech);
         }
-
+        
         public void JoJoSwipAnimation()
         {
             PlayerJojo.PlaySwipAnimation();
