@@ -203,7 +203,7 @@ namespace Assets.Code
         public void StartPlayBedroomEnter(Transform transform)
         {
             moveToTransform = transform;
-            this.IsScriptedActionPlaying = true;
+            //this.IsScriptedActionPlaying = true;
             StartCoroutine(PauseMovement(3));
         }
 
@@ -211,12 +211,13 @@ namespace Assets.Code
         public void MoveToForActionScripted()
         {
             bool isMinDistanceFromTarget =
-                Math.Abs(this.transform.position.x - this.moveToTransform.position.x) <= 0.5
-                || Math.Abs(this.transform.position.y - this.moveToTransform.position.y) <= 0.5;
+                Math.Abs(this.transform.position.x - this.moveToTransform.position.x) <= 1
+                || Math.Abs(this.transform.position.y - this.moveToTransform.position.y) <= 1;
             if (isMinDistanceFromTarget)
             {
                 PlaySwipAnimation();
                 IsScriptedActionPlaying = false;
+                GameService.Instance().JojoBreakJarAttemptFinished();
                 return;
             }
 

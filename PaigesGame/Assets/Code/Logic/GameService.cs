@@ -1,6 +1,7 @@
 ﻿namespace Assets.Code.Logic
 {
     using Assets.Code.GUI;
+    using System.Collections;
     using UnityEngine;
 
     public class GameService
@@ -61,6 +62,12 @@
                 default:
                     return;
             }
+        }
+
+        public void JojoBreakJarAttemptFinished()
+        {
+            GuiController.MattSpeak(SpeechRepository.GetJoJoBreakJarFailedSpeech());
+
         }
     }
 }

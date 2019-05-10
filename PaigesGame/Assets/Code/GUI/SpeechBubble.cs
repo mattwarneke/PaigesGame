@@ -34,6 +34,8 @@ public class SpeechBubble : MonoBehaviour
 
     public void EmptySpeechQueue()
     {
+        speakingInProgress = false;
+        speechBubbleContainer.SetActive(false);
         SpeechQueue.Clear();
     }
 

@@ -6,17 +6,19 @@ using UnityEngine;
 
 public class MattScript : MonoBehaviour
 {
+    private Animator animator;
     public SpeechBubble speechBubble;
     public bool IsFollowing { get; private set; }
     public Transform transformFollowing;
 	// Use this for initialization
-	void Start () {
-        
+	void Start ()
+    {
+        animator = GetComponent<Animator>();
     }
 
     Queue<Vector3> followingPositions = new Queue<Vector3>();
     Vector3 currentTarget;
-    float minDistance = 2f;
+    float minDistance = 1.5f;
     void Update ()
     {
         if (!IsFollowing || this.transformFollowing == null)
@@ -45,6 +47,7 @@ public class MattScript : MonoBehaviour
     {
         FollowTransform(transformToFollow);
         speechBubble.EmptySpeechQueue();
+        animator.SetBool("IsWalking", true);
     }
 
     private void FollowTransform(Transform transformToFollow)
@@ -57,5 +60,10 @@ public class MattScript : MonoBehaviour
     public void Speak(List<Speech> speech)
     {
         speechBubble.AddToSpeechQueue(speech);
+    }
+
+    public void ShowRing()
+    {
+        animator.SetTrigger("Ring");
     }
 }

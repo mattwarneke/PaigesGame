@@ -45,6 +45,11 @@ namespace Assets.Code.GUI
             PlayerJojo.StartPlayBedroomEnter(JarContainer.transform);
         }
 
+        public void ShowRingAnimation()
+        {
+            MattScript.ShowRing();
+        }
+
         public GameObject JarContainer;
         public void RemoveJar()
         {
