@@ -11,11 +11,6 @@ public class SpeechBubble : MonoBehaviour
     public Text speechBubbleText;
 	// Use this for initialization
 	void Start () {
-        string repeatedSpeechText = "Jojo, Jojo!" + Environment.NewLine + "Where are you ?";
-        SpeechQueue.Enqueue(new Speech(repeatedSpeechText, 2));
-        SpeechQueue.Enqueue(new Speech(null, 1));
-        SpeechQueue.Enqueue(new Speech(repeatedSpeechText, 2));
-        StartSpeechQueue();
     }
 	
 	// Update is called once per frame

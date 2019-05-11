@@ -1,6 +1,7 @@
 ﻿namespace Assets.Code.Logic
 {
     using Assets.Code.GUI;
+    using System;
     using System.Collections;
     using UnityEngine;
 
@@ -44,6 +45,7 @@
             switch (eventTriggered)
             {
                 case (EventEnum.MattFollowJoJo):
+                    GuiController.PauseJojoMovement(4f);
                     GuiController.SetMattFollowJojo();
                     GuiController.MattSpeak(SpeechRepository.GetMattFollowJoJoSpeech());
                     break;
@@ -56,6 +58,7 @@
                         return;
                     break;
                 case (EventEnum.EnterBedroom):
+                    GuiController.PauseJojoMovement(3f);
                     GuiController.MattSpeak(SpeechRepository.GetEnterBedroomSpeech());
                     GuiController.EnterBedroom();
                     break;
@@ -65,15 +68,38 @@
                     else
                         GuiController.MattSpeak(SpeechRepository.GetNoMoreDemons());
                     break;
+                case (EventEnum.NearJarTrigger):
+                    GuiController.JoJoSwipAnimation();
+                    GuiController.DoActionAfterXTime(0.5f, () =>
+                    {
+                        GuiController.JoJoSwipAnimation();
+                    });
+                    GuiController.PauseJojoMovement(4f);
+                    GuiController.DoActionAfterXTime(1.5f, () =>
+                    {
+                        GuiController.MattSpeak(SpeechRepository.GetJoJoBreakJarFailedSpeech());
+                        GuiController.DoActionAfterXTime(4, () =>
+                        {
+                            GuiController.ShowRingAnimation();
+                            GuiController.DoActionAfterXTime(4, () =>
+                            {
+                                GuiController.ShowMarryMeCanvasDialog();
+                            });
+                            // another chained call paige is free! and Huh is that a ring?
+                            // will you marry me paige - speech.
+                            // could probably do something more elegant callbacks on animations or something.. but w.e
+                        });
+                    });
+                    break;
                 default:
                     return;
             }
         }
 
-        public void JojoBreakJarAttemptFinished()
+        public void SheSaidYesFuckYeah()
         {
-            GuiController.MattSpeak(SpeechRepository.GetJoJoBreakJarFailedSpeech());
-
+            GuiController.RemoveJar();
+            GuiController.MattSpeak(SpeechRepository.SheSaidYesFuckYeah());
         }
     }
 }

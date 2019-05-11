@@ -11,6 +11,7 @@ namespace Assets.Code.Logic
         MattFollowJoJo,
         NearDoor,
         EnterBedroom,
-        DemonKilled
+        DemonKilled,
+        NearJarTrigger
     }
 }

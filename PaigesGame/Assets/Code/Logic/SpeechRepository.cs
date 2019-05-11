@@ -68,6 +68,22 @@ namespace Assets.Code.Logic
                 new Speech("Nice one Jojo, no more demons the door is open." + Environment.NewLine + "Let's save Paige!", 2)
             };
         }
+
+        public static List<Speech> SheSaidYesFuckYeah()
+        {
+            return new List<Speech>()
+            {
+                new Speech("I Love you like nothing else, I can't wait to spend my life with you!!!!!!!!", 1000)
+            };
+        }
+
+        public static List<Speech> PaigeFreedom()
+        {
+            return new List<Speech>()
+            {
+                new Speech("Freedom!", 3)
+            };
+        }
     }
 
     public class Speech

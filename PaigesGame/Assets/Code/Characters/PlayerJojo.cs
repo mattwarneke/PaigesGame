@@ -57,7 +57,11 @@ namespace Assets.Code
         void Update()
         {
             if (paused)
+            {
+                movement = new Vector2(0, 0);
+                body.velocity = movement;
                 return;
+            }
 
             if (IsScriptedActionPlaying)
             {
@@ -194,8 +198,6 @@ namespace Assets.Code
 
         void FixedUpdate()
         {
-            if (IsScriptedActionPlaying)
-                return;
             // 5 - Move the game object
             body.velocity = movement;
         }
@@ -204,7 +206,7 @@ namespace Assets.Code
         {
             moveToTransform = transform;
             //this.IsScriptedActionPlaying = true;
-            StartCoroutine(PauseMovement(3));
+            PauseWalking(3);
         }
 
         Transform moveToTransform;
@@ -217,15 +219,21 @@ namespace Assets.Code
             {
                 PlaySwipAnimation();
                 IsScriptedActionPlaying = false;
-                GameService.Instance().JojoBreakJarAttemptFinished();
+                GameService.Instance().HandleEvent(EventEnum.NearJarTrigger);
                 return;
             }
 
             this.transform.position = Vector2.Lerp(this.transform.position, this.moveToTransform.position, Time.deltaTime/2);
         }
 
+        public void PauseWalking(float pausedTime)
+        {
+            animator.SetFloat("WalkSpeed", 0f);
+            StartCoroutine(PauseMovement(pausedTime));
+        }
+
         bool paused = false;
-        IEnumerator PauseMovement(float pausedTime)
+        private IEnumerator PauseMovement(float pausedTime)
         {
             paused = true;
             yield return new WaitForSeconds(pausedTime);
@@ -258,7 +266,7 @@ namespace Assets.Code
 
         public void PlaySwipAnimation()
         {
-            StartCoroutine(PauseMovement(0.25f));
+            //StartCoroutine(PauseMovement(0.25f));
             animator.SetTrigger("attack");
         }
     }
