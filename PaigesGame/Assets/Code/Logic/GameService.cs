@@ -49,13 +49,9 @@
                     GuiController.SetMattFollowJojo();
                     GuiController.MattSpeak(SpeechRepository.GetMattFollowJoJoSpeech());
                     break;
-                case (EventEnum.NearDoor):
-                    if (CollectableCount > 1)
-                        GuiController.MattSpeak(SpeechRepository.GetNearDoorSpeechNoneCollected());
-                    else if (CollectableCount == 1)
-                        GuiController.MattSpeak(SpeechRepository.GetNearDoorSpeechOneMore());
-                    else
-                        return;
+                case (EventEnum.ExitLounge):
+                    GuiController.PauseJojoMovement(5f);
+                    GuiController.MattSpeak(SpeechRepository.GetExitLoungeSpeechNoneCollected());
                     break;
                 case (EventEnum.EnterBedroom):
                     GuiController.PauseJojoMovement(3f);

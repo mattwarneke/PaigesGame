@@ -9,7 +9,7 @@ namespace Assets.Code.Logic
     {
         NoEvent,
         MattFollowJoJo,
-        NearDoor,
+        ExitLounge,
         EnterBedroom,
         DemonKilled,
         NearJarTrigger

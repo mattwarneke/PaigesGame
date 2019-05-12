@@ -13,28 +13,28 @@ namespace Assets.Code.Logic
             return new List<Speech>()
             {
                 new Speech("There you are JoJo!", 2.5f),
-                new Speech("I have been looking for you, I need your help.", 3.25f),
+                new Speech("I have been looking for you, I need your help.", 4f),
                 new Speech("Paige is trapped in the bedroom, we need to free her!", 4f)
             };
         }
 
-        public static List<Speech> GetNearDoorSpeechNoneCollected()
+        public static List<Speech> GetExitLoungeSpeechNoneCollected()
         {
             return new List<Speech>()
             {
-                new Speech("Damn the door is locked." + Environment.NewLine + "We need to kill the demons to unlock it!", 3),
-                new Speech("Try the kitchen or the bathroom.", 2.5f)
+                new Speech("Damn looks like the bedroom door is locked.", 3f),
+                new Speech("We need to kill the demons to unlock it!", 2.25f),
+                new Speech("They are in the kitchen and the bathroom.", 2.5f)
             };
         }
 
-        public static List<Speech> GetNearDoorSpeechOneMore()
-        {
-            return new List<Speech>()
-            {
-                new Speech("Damn the door is locked." + Environment.NewLine + "We need to kill one more of the demons to unlock it!", 3),
-                new Speech("Try the kitchen or the bathroom.", 2.5f)
-            };
-        }
+        //public static List<Speech> GetNearDoorSpeechOneMore()
+        //{
+        //    return new List<Speech>()
+        //    {
+        //        new Speech("Damn the door is locked." + Environment.NewLine + "We need to kill more of the demons to unlock it!", 3)
+        //    };
+        //}
 
         public static List<Speech> GetEnterBedroomSpeech()
         {
@@ -81,7 +81,7 @@ namespace Assets.Code.Logic
         {
             return new List<Speech>()
             {
-                new Speech("Freedom!", 3)
+                new Speech("Finaaalllllly!", 3)
             };
         }
     }
