@@ -45,16 +45,16 @@
             switch (eventTriggered)
             {
                 case (EventEnum.MattFollowJoJo):
-                    GuiController.PauseJojoMovement(4f);
+                    GuiController.PauseJojoMovement(0f);
                     GuiController.SetMattFollowJojo();
                     GuiController.MattSpeak(SpeechRepository.GetMattFollowJoJoSpeech());
                     break;
                 case (EventEnum.ExitLounge):
-                    GuiController.PauseJojoMovement(5f);
+                    //GuiController.PauseJojoMovement(0.1f);
                     GuiController.MattSpeak(SpeechRepository.GetExitLoungeSpeechNoneCollected());
                     break;
                 case (EventEnum.EnterBedroom):
-                    GuiController.PauseJojoMovement(3f);
+                    GuiController.PauseJojoMovement(0f);
                     GuiController.MattSpeak(SpeechRepository.GetEnterBedroomSpeech());
                     GuiController.EnterBedroom();
                     break;

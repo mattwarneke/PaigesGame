@@ -139,6 +139,7 @@ namespace Assets.Code
             IsScriptedActionPlaying = false;
         }
 
+        private Vector3? lastInputPosition;
         private Vector3? GetInputPosition()
         {
             if (Input.touchSupported
@@ -146,14 +147,14 @@ namespace Assets.Code
                 && Application.platform != RuntimePlatform.WebGLPlayer)
             {
                 Touch touch = Input.GetTouch(0);
-                return Camera.main.ScreenToWorldPoint(touch.position);
+                lastInputPosition = Camera.main.ScreenToWorldPoint(touch.position);
             }
             else if (Input.GetMouseButton(0))
             {
-                return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                lastInputPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
 
-            return null;
+            return lastInputPosition;
         }
         
         private List<MoveInputDirection> getDirectionToInput(Vector3 inputPosition)
@@ -236,6 +237,7 @@ namespace Assets.Code
         private IEnumerator PauseMovement(float pausedTime)
         {
             paused = true;
+            lastInputPosition = null;
             yield return new WaitForSeconds(pausedTime);
             paused = false;
         }

@@ -24,40 +24,48 @@ public class MattScript : MonoBehaviour
     }
 
     Queue<Vector3> followingPositions = new Queue<Vector3>();
-    Vector3 currentTarget;
-    float minDistanceY = 1.5f;
-    float minDistanceX = 2f;
+    Vector3? currentTarget;
+    float minDistanceY = 2f;
+    float minDistanceX = 2.25f;
     void Update ()
     {
         if (!IsFollowing || this.transformFollowing == null)
             return;
-        
+
         bool isMoreThanMinDistanceFromFollowing =
             Math.Abs(this.transform.position.x - this.transformFollowing.position.x) > minDistanceX
             || Math.Abs(this.transform.position.y - this.transformFollowing.position.y) > minDistanceY;
         if (isMoreThanMinDistanceFromFollowing)
+        {   // object to follow is far enough away, add waypoint to follow path.
+            followingPositions.Enqueue(this.transformFollowing.position);
+            if (currentTarget == null)
+                currentTarget = followingPositions.Dequeue();
+        }
+        
+        bool isAtCurrentTarget = 
+            currentTarget.HasValue
+            && Math.Abs(this.transform.position.x - this.currentTarget.Value.x) <= minDistanceX
+            && Math.Abs(this.transform.position.y - this.currentTarget.Value.y) <= minDistanceY;
+    
+        // close enough to current target, look for next target or stop.
+        if (isAtCurrentTarget && followingPositions.Count > 0)
+            currentTarget = followingPositions.Dequeue();
+        else if (isAtCurrentTarget && followingPositions.Count == 0)
+            currentTarget = null;
+
+        if (currentTarget.HasValue)
         {
             animator.SetBool("IsWalking", true);
             animator.SetFloat("WalkSpeed", 0.75f);
-            this.transform.position = Vector2.Lerp(this.transform.position, this.transformFollowing.position, Time.deltaTime*2);
+            this.transform.position = Vector2.Lerp(this.transform.position, this.currentTarget.Value, Time.deltaTime * 2);
         }
         else
         {
             animator.SetFloat("WalkSpeed", 0);
             animator.SetBool("IsWalking", false);
         }
-
-        // does not work well with rotation etc but for now it's kinda cool.
-        //this.transform.LookAt(this.transformFollowing);
-	}
+    }
     
-    //TODO:
-    //public void FreeFromJar()
-    //{
-    //    speechBubble.Speak("Well done Jojo! I didn't think you would listen", 2);
-    //    StartCoroutine(speechBubble.WaitUntilSpeechIsOver());
-    //}
-
     public void ActivateFollow(Transform transformToFollow)
     {
         FollowTransform(transformToFollow);
