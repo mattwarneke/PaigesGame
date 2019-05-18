@@ -32,31 +32,15 @@ namespace Assets.Code.GUI
             MattScript.ActivateFollow(Jojo.transform);
         }
 
+        public void MattSpeakWithCallBack(List<Speech> speech, Action callback)
+        {
+            MattSpeak(speech);
+            DoActionAfterSpeech(callback);
+        }
+
         public void MattSpeak(List<Speech> speech)
         {
             MattScript.Speak(speech);
-        }
-
-        public void DoActionAfterXTime(float waitTime, Action callback)
-        {
-            StartCoroutine(RunCallbackAfterWait(waitTime, callback));
-        }
-        
-        private IEnumerator RunCallbackAfterWait(float waitTime, Action callback)
-        {
-            //yield return new WaitUntil(waitTime);
-            yield return new WaitForSecondsRealtime(waitTime);
-            callback();
-        }
-
-        public void DoActionAfterSpeech(Action callback)
-        {
-            MattScript.speechBubble.RunActionOnSpeechFinished(callback);
-        }
-
-        public void DoActionAfterPanFinished(Action callback)
-        {
-            CameraScript.RunActionOnCustomPanFinished(callback);
         }
         
         public void PauseJojoMovement(float timePaused)
@@ -73,7 +57,7 @@ namespace Assets.Code.GUI
         {
             PlayerJojo.RestartWalking();
         }
-
+        
         public Transform[] demonPositions;
         public void PanToDemons()
         {
@@ -89,6 +73,12 @@ namespace Assets.Code.GUI
         public void PanToBedroomDoor()
         {
             CameraScript.SetCustomPanTarget(BedroomDoor.transform.position);
+        }
+
+        public void PanToPaigeWithCallBack(Action callback)
+        {
+            PanToPaige();
+            DoActionAfterPanFinished(callback);
         }
 
         public void PanToPaige()
@@ -134,6 +124,28 @@ namespace Assets.Code.GUI
             JarContainer.SetActive(false);
             PaigeScript.Speak(SpeechRepository.PaigeFreedom());
             // stop paige animating and kiss???
+        }
+
+        public void DoActionAfterXTime(float waitTime, Action callback)
+        {
+            StartCoroutine(RunCallbackAfterWait(waitTime, callback));
+        }
+
+        private IEnumerator RunCallbackAfterWait(float waitTime, Action callback)
+        {
+            //yield return new WaitUntil(waitTime);
+            yield return new WaitForSecondsRealtime(waitTime);
+            callback();
+        }
+
+        public void DoActionAfterSpeech(Action callback)
+        {
+            MattScript.speechBubble.RunActionOnSpeechFinished(callback);
+        }
+
+        public void DoActionAfterPanFinished(Action callback)
+        {
+            CameraScript.RunActionOnCustomPanFinished(callback);
         }
     }
 }

@@ -74,7 +74,6 @@ public class CollectableBounce : MonoBehaviour
 
     void OnDestroy()
     {
-        GameService.Instance().RemoveCollectable();
         GameService.Instance().HandleEvent(eventRaisedOnDestroy);
     }
 }

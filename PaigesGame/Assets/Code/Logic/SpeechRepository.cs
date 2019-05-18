@@ -48,16 +48,16 @@ namespace Assets.Code.Logic
         {
             return new List<Speech>()
             {
-                new Speech("Damn, couldn't break it?", 2.5f),
-                new Speech("Then I think I have an idea!", 2.5f)
+                new Speech("Huh, it wouldn't break?", 2.5f),
+                new Speech("I've got something that might do the trick!", 2.5f)
             };
         }
 
-        public static List<Speech> GetDemonDied(int demonsLeft)
+        public static List<Speech> GetDemonDied()
         {
             return new List<Speech>()
             {
-                new Speech("Woah! Didn't expect that. " + demonsLeft + " left!", 2.5f)
+                new Speech("Woah! Didn't think you'd actually do it. One left!", 2.5f)
             };
         }
 
@@ -65,7 +65,7 @@ namespace Assets.Code.Logic
         {
             return new List<Speech>()
             {
-                new Speech("Nice one Jojo, no more demons the door is open." + Environment.NewLine + "Let's save Paige!", 2)
+                new Speech("Good girl! The door is open. Time to save Paige!", 2)
             };
         }
 

@@ -220,7 +220,7 @@ namespace Assets.Code
             {
                 PlaySwipAnimation();
                 IsScriptedActionPlaying = false;
-                GameService.Instance().HandleEvent(EventEnum.NearJarTrigger);
+                GameService.Instance().JoJoNearJar();
                 return;
             }
 
