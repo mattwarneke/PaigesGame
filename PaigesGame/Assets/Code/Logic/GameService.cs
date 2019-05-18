@@ -29,9 +29,13 @@
             CollectableCount++;
         }
 
-        public void RemoveCollectable()
+        public void JoJoSwip()
         {
             GuiController.JoJoSwipAnimation();
+        }
+
+        public void RemoveCollectable()
+        {
             CollectableCount--;
             if (CollectableCount == 0)
             {
@@ -84,10 +88,10 @@
                     });
                     break;
                 case (EventEnum.NearJarTrigger):
-                    GuiController.JoJoSwipAnimation();
+                    JoJoSwip();
                     GuiController.DoActionAfterXTime(0.5f, () =>
                     {
-                        GuiController.JoJoSwipAnimation();
+                        JoJoSwip();
                     });
                     GuiController.PauseJojoMovement();
                     GuiController.DoActionAfterXTime(1.5f, () =>
