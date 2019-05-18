@@ -45,24 +45,43 @@
             switch (eventTriggered)
             {
                 case (EventEnum.MattFollowJoJo):
-                    GuiController.PauseJojoMovement(0f);
+                    GuiController.PauseJojoMovement(8f);
                     GuiController.SetMattFollowJojo();
                     GuiController.MattSpeak(SpeechRepository.GetMattFollowJoJoSpeech());
+                    GuiController.DoActionAfterXTime(3.5f, () =>
+                    {
+                        GuiController.PanToPaige();
+                    });
                     break;
                 case (EventEnum.ExitLounge):
-                    //GuiController.PauseJojoMovement(0.1f);
+                    GuiController.PauseJojoMovement(6.5f);
                     GuiController.MattSpeak(SpeechRepository.GetExitLoungeSpeechNoneCollected());
-                    break;
-                case (EventEnum.EnterBedroom):
-                    GuiController.PauseJojoMovement(0f);
-                    GuiController.MattSpeak(SpeechRepository.GetEnterBedroomSpeech());
-                    GuiController.EnterBedroom();
+                    GuiController.DoActionAfterSpeech(() =>
+                    {
+                        GuiController.PanToDemons();
+                    });
                     break;
                 case (EventEnum.DemonKilled):
                     if (CollectableCount > 0)
                         GuiController.MattSpeak(SpeechRepository.GetDemonDied(CollectableCount));
                     else
-                        GuiController.MattSpeak(SpeechRepository.GetNoMoreDemons());
+                    {
+                        GuiController.PauseJojoMovement();
+                        GuiController.PanToBedroomDoor();
+                        GuiController.DoActionAfterPanFinished(() =>
+                        {
+                            GuiController.MattSpeak(SpeechRepository.GetNoMoreDemons());
+                            GuiController.RestartJoJoMovement();
+                        });
+                    }
+                    break;
+                case (EventEnum.EnterBedroom):
+                    GuiController.PauseJojoMovement(5f);
+                    GuiController.MattSpeak(SpeechRepository.GetEnterBedroomSpeech());
+                    GuiController.DoActionAfterXTime(3f, () =>
+                    {
+                        GuiController.PanToPaige();
+                    });
                     break;
                 case (EventEnum.NearJarTrigger):
                     GuiController.JoJoSwipAnimation();
@@ -70,7 +89,7 @@
                     {
                         GuiController.JoJoSwipAnimation();
                     });
-                    GuiController.PauseJojoMovement(4f);
+                    GuiController.PauseJojoMovement();
                     GuiController.DoActionAfterXTime(1.5f, () =>
                     {
                         GuiController.MattSpeak(SpeechRepository.GetJoJoBreakJarFailedSpeech());

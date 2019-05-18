@@ -25,27 +25,30 @@ public class MattScript : MonoBehaviour
 
     Queue<Vector3> followingPositions = new Queue<Vector3>();
     Vector3? currentTarget;
-    float minDistanceY = 2f;
-    float minDistanceX = 2.25f;
+    float minDistanceY = 1.75f;
+    float minDistanceX = 2f;
     void Update ()
     {
         if (!IsFollowing || this.transformFollowing == null)
             return;
+        // will follow the queue always even when close.
+        bool IsExactFollow = false;// cant get it working smooth
 
-        bool isMoreThanMinDistanceFromFollowing =
+        bool isMoreThanMinDistanceFromFollowing =// object to follow is far enough away, add waypoint to follow path.
             Math.Abs(this.transform.position.x - this.transformFollowing.position.x) > minDistanceX
             || Math.Abs(this.transform.position.y - this.transformFollowing.position.y) > minDistanceY;
-        if (isMoreThanMinDistanceFromFollowing)
-        {   // object to follow is far enough away, add waypoint to follow path.
+       
+        if (IsExactFollow || isMoreThanMinDistanceFromFollowing)
+        {
             followingPositions.Enqueue(this.transformFollowing.position);
             if (currentTarget == null)
                 currentTarget = followingPositions.Dequeue();
         }
-        
+
         bool isAtCurrentTarget = 
             currentTarget.HasValue
-            && Math.Abs(this.transform.position.x - this.currentTarget.Value.x) <= minDistanceX
-            && Math.Abs(this.transform.position.y - this.currentTarget.Value.y) <= minDistanceY;
+            && Math.Abs(this.transform.position.x - this.currentTarget.Value.x) <= minDistanceX + 0.25f
+            && Math.Abs(this.transform.position.y - this.currentTarget.Value.y) <= minDistanceY + 0.25f;
     
         // close enough to current target, look for next target or stop.
         if (isAtCurrentTarget && followingPositions.Count > 0)
@@ -57,7 +60,8 @@ public class MattScript : MonoBehaviour
         {
             animator.SetBool("IsWalking", true);
             animator.SetFloat("WalkSpeed", 0.75f);
-            this.transform.position = Vector2.Lerp(this.transform.position, this.currentTarget.Value, Time.deltaTime * 2);
+            if (isMoreThanMinDistanceFromFollowing)
+                this.transform.position = Vector2.Lerp(this.transform.position, this.currentTarget.Value, Time.deltaTime * 2);
         }
         else
         {
@@ -83,8 +87,6 @@ public class MattScript : MonoBehaviour
     
     public void Speak(List<Speech> speech)
     {
-        animator.SetFloat("WalkSpeed", 0);
-        animator.SetBool("IsWalking", false);
         speechBubble.AddToSpeechQueue(speech);
     }
 

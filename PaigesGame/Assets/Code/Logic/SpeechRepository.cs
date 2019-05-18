@@ -12,9 +12,10 @@ namespace Assets.Code.Logic
         {
             return new List<Speech>()
             {
-                new Speech("There you are JoJo!", 2.5f),
-                new Speech("I have been looking for you, I need your help.", 4f),
-                new Speech("Paige is trapped in the bedroom, we need to free her!", 4f)
+                new Speech("There you are JoJo!", 1.5f),
+                new Speech("I have been looking for you, I need your help.", 2f),
+                new Speech(string.Empty, 2f),//pans to paige during
+                new Speech("Paige is trapped in the bedroom, we need to free her!", 2.5f)
             };
         }
 
@@ -22,9 +23,8 @@ namespace Assets.Code.Logic
         {
             return new List<Speech>()
             {
-                new Speech("Damn looks like the bedroom door is locked.", 3f),
-                new Speech("We need to kill the demons to unlock it!", 2.25f),
-                new Speech("They are in the kitchen and the bathroom.", 2.5f)
+                new Speech("Damn looks like the bedroom door is locked.", 2f),
+                new Speech("We need to kill the demons to unlock it!", 2f)
             };
         }
 
@@ -48,8 +48,8 @@ namespace Assets.Code.Logic
         {
             return new List<Speech>()
             {
-                new Speech("Damn, couldn't break it?", 2),
-                new Speech("Then I think I have an idea!", 2)
+                new Speech("Damn, couldn't break it?", 2.5f),
+                new Speech("Then I think I have an idea!", 2.5f)
             };
         }
 
@@ -57,7 +57,7 @@ namespace Assets.Code.Logic
         {
             return new List<Speech>()
             {
-                new Speech("Wow, didn't expect that. Well done, only " + demonsLeft + " demons left!", 2)
+                new Speech("Woah! Didn't expect that. " + demonsLeft + " left!", 2.5f)
             };
         }
 

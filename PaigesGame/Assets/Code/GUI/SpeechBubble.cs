@@ -13,10 +13,30 @@ public class SpeechBubble : MonoBehaviour
 	void Start () {
     }
 	
+
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+        if (currentlyPlayingSpeech == null && this.SpeechQueue.Count == 0)
+            return;
+
+        if (HasSpeechTimePassed())
+        {
+            if (this.SpeechQueue.Count > 0)
+                PlayNextSpeech();
+            else
+                FinishSpeech();
+        }
+
 	}
+
+    Speech currentlyPlayingSpeech { get; set; }
+    float lastSpeechTime;
+    private bool HasSpeechTimePassed()
+    {
+        float timeSpeechPlaying = Time.time - lastSpeechTime;
+        return timeSpeechPlaying > currentlyPlayingSpeech.SpeechTimeSeconds;
+    }
 
     Queue<Speech> SpeechQueue = new Queue<Speech>();
     public void AddToSpeechQueue(List<Speech> speechs)
@@ -24,63 +44,50 @@ public class SpeechBubble : MonoBehaviour
         foreach (Speech speech in speechs)
             SpeechQueue.Enqueue(speech);
 
-        StartSpeechQueue();
+        PlayNextSpeech();
+    }
+    
+    void PlayNextSpeech()
+    {
+        Speech speech = SpeechQueue.Dequeue();
+        if (speech == null)
+            return;
+
+        currentlyPlayingSpeech = speech;
+        lastSpeechTime = Time.time;
+
+        if (!string.IsNullOrEmpty(speech.SpeechText))
+        {
+            this.speechBubbleContainer.SetActive(true);
+            speechBubbleText.text = speech.SpeechText;
+        }
+        else
+        {   // empty speech is a pause.
+            this.speechBubbleContainer.SetActive(false);
+        }
+    }
+
+    void FinishSpeech()
+    {
+        this.speechBubbleContainer.SetActive(false);
+        currentlyPlayingSpeech = null;
     }
 
     public void EmptySpeechQueue()
     {
-        speakingInProgress = false;
+        currentlyPlayingSpeech = null;
         speechBubbleContainer.SetActive(false);
         SpeechQueue.Clear();
     }
 
-    public void StartSpeechQueue()
+    public void RunActionOnSpeechFinished(Action callback)
     {
-        if (!speakingInProgress)
-            StartCoroutine(PlaySpeechQueue());
+        StartCoroutine(RunActionOnSpeechFinishedCoroutine(callback));
     }
 
-    IEnumerator PlaySpeechQueue()
+    IEnumerator RunActionOnSpeechFinishedCoroutine(Action callback)
     {
-        Speech speech = SpeechQueue.Dequeue();
-        if (speech != null)
-        {
-            if (!string.IsNullOrEmpty(speech.SpeechText))
-            {
-                this.speechBubbleContainer.SetActive(true);
-                speechBubbleText.text = speech.SpeechText;
-            }
-            else
-            {   // empty speech is a pause.
-                this.speechBubbleContainer.SetActive(false);
-            }
-            speakingInProgress = true;
-            yield return new WaitForSeconds(speech.SpeechTimeSeconds);
-        }
-
-        if (SpeechQueue.Count > 0)
-        {   // play next speech
-            StartCoroutine(PlaySpeechQueue());
-        }
-        else
-        {
-            this.speechBubbleContainer.SetActive(false);
-            speakingInProgress = false;
-        }
-    }
-
-
-
-    bool speakingInProgress = false;
-    IEnumerator DisableAfterSeconds(int seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        this.speechBubbleContainer.SetActive(false);
-        speakingInProgress = false;
-    }
-
-    public IEnumerator WaitUntilSpeechIsOver()
-    {
-        yield return new WaitWhile(() => speakingInProgress == true);
+        yield return new WaitWhile(() => currentlyPlayingSpeech != null);
+        callback();
     }
 }

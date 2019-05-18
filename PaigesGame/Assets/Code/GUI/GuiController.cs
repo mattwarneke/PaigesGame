@@ -16,6 +16,8 @@ namespace Assets.Code.GUI
         public MattScript MattScript;
         public PaigeScript PaigeScript;
 
+        public CameraFollow CameraScript;
+
         public GameObject DialogCanvasGO;
         
         void Start()
@@ -42,13 +44,56 @@ namespace Assets.Code.GUI
         
         private IEnumerator RunCallbackAfterWait(float waitTime, Action callback)
         {
-            yield return new WaitForSeconds(waitTime);
+            //yield return new WaitUntil(waitTime);
+            yield return new WaitForSecondsRealtime(waitTime);
             callback();
+        }
+
+        public void DoActionAfterSpeech(Action callback)
+        {
+            MattScript.speechBubble.RunActionOnSpeechFinished(callback);
+        }
+
+        public void DoActionAfterPanFinished(Action callback)
+        {
+            CameraScript.RunActionOnCustomPanFinished(callback);
         }
         
         public void PauseJojoMovement(float timePaused)
         {
             PlayerJojo.PauseWalking(timePaused);
+        }
+
+        public void PauseJojoMovement()
+        {
+            PlayerJojo.PauseWalking();
+        }
+
+        public void RestartJoJoMovement()
+        {
+            PlayerJojo.RestartWalking();
+        }
+
+        public Transform[] demonPositions;
+        public void PanToDemons()
+        {
+            if (demonPositions.Length > 0)
+                CameraScript.SetCustomPanTarget(demonPositions[0].position);
+
+            CameraScript.RunActionOnCustomPanFinished(() =>
+            {
+                CameraScript.SetCustomPanTarget(demonPositions[1].position);
+            });
+        }
+
+        public void PanToBedroomDoor()
+        {
+            CameraScript.SetCustomPanTarget(BedroomDoor.transform.position);
+        }
+
+        public void PanToPaige()
+        {
+            CameraScript.SetCustomPanTarget(Paige.transform.position);
         }
 
         public void JoJoSwipAnimation()
@@ -61,12 +106,7 @@ namespace Assets.Code.GUI
         {
             BedroomDoor.SetActive(false);
         }
-
-        public void EnterBedroom()
-        {
-            PlayerJojo.StartPlayBedroomEnter(JarContainer.transform);
-        }
-
+        
         public void NearJar()
         {
             PlayerJojo.PlaySwipAnimation();
