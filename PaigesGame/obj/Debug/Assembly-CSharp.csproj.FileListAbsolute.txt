@@ -146,9 +146,6 @@ C:\Users\Matt\Documents\PaigesGame\PaigesGame\obj\Debug\Assembly-CSharp.csproj.C
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\obj\Debug\Assembly-CSharp.dll
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\obj\Debug\Assembly-CSharp.pdb
-C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-hlapi.Editor.dll
-C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-hlapi.Runtime.dll
-C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-weaver.Editor.dll
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Microsoft.Win32.Primitives.dll
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\netstandard.dll
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\System.AppContext.dll
@@ -270,16 +267,14 @@ C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEditor.XR.Lega
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEngine.XR.LegacyInputHelpers.dll
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Unity.Timeline.Editor.pdb
-C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-hlapi.Editor.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Unity.TextMeshPro.Editor.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Unity.PackageManagerUI.Editor.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Unity.Timeline.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Unity.CollabProxy.Editor.pdb
-C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-weaver.Editor.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEngine.XR.LegacyInputHelpers.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEditor.SpatialTracking.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEngine.SpatialTracking.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Unity.TextMeshPro.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Unity.Analytics.DataPrivacy.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEditor.XR.LegacyInputHelpers.pdb
-C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-hlapi.Runtime.pdb
+C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEngine.WebGLModule.dll

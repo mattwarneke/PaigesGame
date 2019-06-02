@@ -229,12 +229,16 @@ namespace Assets.Code
 
         public void PauseWalking(float pausedTime)
         {
+            if (animator == null)
+                return;
             animator.SetFloat("WalkSpeed", 0f);
             StartCoroutine(PauseMovement(pausedTime));
         }
 
         public void PauseWalking()
         {
+            if (animator == null)
+                return;
             animator.SetFloat("WalkSpeed", 0f);
             paused = true;
             lastInputPosition = null;
