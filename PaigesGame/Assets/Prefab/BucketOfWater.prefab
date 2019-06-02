@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4218686256865528}
   - component: {fileID: 212725550911418504}
-  - component: {fileID: 114994623684578034}
   - component: {fileID: 61295629938766992}
   m_Layer: 0
   m_Name: BucketOfWater
@@ -58,7 +57,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5325699, y: 0.11639291}
-    oldSize: {x: 1.0434783, y: 1.173913}
+    oldSize: {x: 0.48, y: 0.54}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -67,17 +66,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.35, y: 1.35}
   m_EdgeRadius: 0
---- !u!114 &114994623684578034
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1404849015578878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22db20d75c10b2c47b416678db57a3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212725550911418504
 SpriteRenderer:
   m_ObjectHideFlags: 1

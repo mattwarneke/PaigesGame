@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4747018032373078}
   - component: {fileID: 212793032974693162}
   - component: {fileID: 61616814069369842}
-  - component: {fileID: 114207681813184850}
   m_Layer: 0
   m_Name: BottomWallInside
   m_TagString: LargeTile
@@ -58,7 +57,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1.3333334, y: 4}
+    oldSize: {x: 0.6, y: 1.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -67,17 +66,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.35, y: 1.9041137}
   m_EdgeRadius: 0
---- !u!114 &114207681813184850
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117342023186938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22db20d75c10b2c47b416678db57a3f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212793032974693162
 SpriteRenderer:
   m_ObjectHideFlags: 1

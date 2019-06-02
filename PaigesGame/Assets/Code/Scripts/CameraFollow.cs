@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
-using Assets.Code.Logic;
-using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class CameraFollow : MonoBehaviour 
 {
@@ -79,9 +79,9 @@ public class CameraFollow : MonoBehaviour
 			// The target y coordinate should be a Lerp between the camera's current y position and the player's current y position.
 			target.y = Mathf.Lerp(transform.position.y, followingTarget.y , cameraLerpSpeed * Time.deltaTime);
 		}
-		
-		// Clamp the camera within the bounds
-		target.x = Mathf.Clamp(target.x, MINBounds.x, MAXBounds.x);
+        
+        // Clamp the camera within the bounds
+        target.x = Mathf.Clamp(target.x, MINBounds.x, MAXBounds.x);
 		target.y = Mathf.Clamp(target.y, MINBounds.y, MAXBounds.y);
 
         // Set the camera's position to the target position with the same z component.

@@ -1,32 +1,87 @@
 fileFormatVersion: 2
 guid: 60923ffa3eb76224cab22862179034f9
 TextureImporter:
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: -7241275632015354139
+    second: TreeWisp_0
+  - first:
+      213: -1925742771875984690
+    second: TreeWisp_1
+  - first:
+      213: -549825548291572755
+    second: TreeWisp_2
+  - first:
+      213: -656079086687531631
+    second: TreeWisp_3
+  - first:
+      213: 258894564557522283
+    second: TreeWisp_4
+  - first:
+      213: -3023769061395096657
+    second: TreeWisp_5
+  - first:
+      213: -6879872708751988664
+    second: TreeWisp_6
+  - first:
+      213: -6230814885991659432
+    second: TreeWisp_7
+  - first:
+      213: -7949164991791925148
+    second: TreeWisp_8
+  - first:
+      213: 4105837693289455838
+    second: TreeWisp_9
+  - first:
+      213: -7746797528195216443
+    second: TreeWisp_10
+  - first:
+      213: 1478932955381494098
+    second: TreeWisp_11
+  - first:
+      213: -1778231613681509500
+    second: TreeWisp_12
+  - first:
+      213: 3570331951358204836
+    second: TreeWisp_13
+  - first:
+      213: -2259383669172111946
+    second: TreeWisp_14
+  externalObjects: {}
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: .25
+    heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: 1
-    mipBias: -1
-    wrapMode: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -34,15 +89,36 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: .5, y: .5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: TreeWisp_0
+    - serializedVersion: 2
+      name: TreeWisp_0
       rect:
         serializedVersion: 2
         x: 0
@@ -52,7 +128,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_1
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9ee97528739354fb3867bba4650d6b
+      internalID: -7241275632015354139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_1
       rect:
         serializedVersion: 2
         x: 128
@@ -62,7 +149,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_2
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3df09b819cfdf864ab9452e3053984e9
+      internalID: -1925742771875984690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_2
       rect:
         serializedVersion: 2
         x: 256
@@ -72,7 +170,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_3
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f5f2d5d737a7449951f87231d4b907
+      internalID: -549825548291572755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_3
       rect:
         serializedVersion: 2
         x: 384
@@ -82,7 +191,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_4
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb037dfb1f76b82468d861792b7da96c
+      internalID: -656079086687531631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_4
       rect:
         serializedVersion: 2
         x: 512
@@ -92,7 +212,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_5
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d59be036ea52d438e601d59fd286cb
+      internalID: 258894564557522283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_5
       rect:
         serializedVersion: 2
         x: 640
@@ -102,7 +233,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_6
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 507e08f74a69bf5449da1920f9e10345
+      internalID: -3023769061395096657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_6
       rect:
         serializedVersion: 2
         x: 768
@@ -112,7 +254,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_7
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407202d64bea23f4683a11d297b73577
+      internalID: -6879872708751988664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_7
       rect:
         serializedVersion: 2
         x: 896
@@ -122,7 +275,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_8
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2bc88a1ee5997c43a7e43d8c8dfe72f
+      internalID: -6230814885991659432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -132,7 +296,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_9
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce731aba143e9b488f411e470931480
+      internalID: -7949164991791925148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_9
       rect:
         serializedVersion: 2
         x: 1152
@@ -142,7 +317,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_10
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08536933979a7f7418f965db85ac55bb
+      internalID: 4105837693289455838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_10
       rect:
         serializedVersion: 2
         x: 1280
@@ -152,7 +338,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_11
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3819ab44f2eadec449830c1a78801c01
+      internalID: -7746797528195216443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_11
       rect:
         serializedVersion: 2
         x: 1408
@@ -162,7 +359,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_12
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb237f4e1699aa40ba83353ef9ecd74
+      internalID: 1478932955381494098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_12
       rect:
         serializedVersion: 2
         x: 1536
@@ -172,7 +380,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_13
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509a7a7f2c4fcf744a3f312a4f3bbe4d
+      internalID: -1778231613681509500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_13
       rect:
         serializedVersion: 2
         x: 1664
@@ -182,7 +401,18 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: TreeWisp_14
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e460dc8304cf246906ef3239a0e5d0
+      internalID: 3570331951358204836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreeWisp_14
       rect:
         serializedVersion: 2
         x: 1792
@@ -192,5 +422,29 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da8cd79ffcae0a4e8ff392df7fff9a3
+      internalID: -2259383669172111946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

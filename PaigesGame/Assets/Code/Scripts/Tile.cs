@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Tile : MonoBehaviour 
 {
-	#region Member Variables
 	/// <summary>
 	/// The player transform.
 	/// </summary>
@@ -13,7 +12,6 @@ public class Tile : MonoBehaviour
 	/// The sprite renderer.
 	/// </summary>
 	private SpriteRenderer spriteRenderer;
-	#endregion
 
 	// Use this for initialization
 	void Start () 
