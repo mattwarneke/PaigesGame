@@ -26,6 +26,9 @@
 
         public void HandleEvent(EventEnum eventTriggered)
         {
+            if (GuiController == null)// game unload
+                return;
+
             switch (eventTriggered)
             {
                 case (EventEnum.MattFollowJoJo):

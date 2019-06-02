@@ -61,6 +61,9 @@ namespace Assets.Code.GUI
         public Transform[] demonPositions;
         public void PanToDemons()
         {
+            if (CameraScript == null)
+                return;
+
             if (demonPositions.Length > 0)
                 CameraScript.SetCustomPanTarget(demonPositions[0].position);
 
@@ -72,7 +75,8 @@ namespace Assets.Code.GUI
 
         public void PanToBedroomDoor()
         {
-            CameraScript.SetCustomPanTarget(BedroomDoor.transform.position);
+            if (BedroomDoor != null)
+                CameraScript.SetCustomPanTarget(BedroomDoor.transform.position);
         }
 
         public void PanToPaigeWithCallBack(Action callback)
@@ -94,7 +98,8 @@ namespace Assets.Code.GUI
         public GameObject BedroomDoor;
         public void RemoveBedroomDoor()
         {
-            BedroomDoor.SetActive(false);
+            if (BedroomDoor != null)
+                BedroomDoor.SetActive(false);
         }
         
         public void NearJar()
@@ -145,6 +150,8 @@ namespace Assets.Code.GUI
 
         public void DoActionAfterPanFinished(Action callback)
         {
+            if (CameraScript == null)
+                return;
             CameraScript.RunActionOnCustomPanFinished(callback);
         }
     }

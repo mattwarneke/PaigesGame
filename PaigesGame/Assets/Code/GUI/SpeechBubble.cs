@@ -56,6 +56,9 @@ public class SpeechBubble : MonoBehaviour
         currentlyPlayingSpeech = speech;
         lastSpeechTime = Time.time;
 
+        if (this.speechBubbleContainer == null)
+            return;
+
         if (!string.IsNullOrEmpty(speech.SpeechText))
         {
             this.speechBubbleContainer.SetActive(true);
