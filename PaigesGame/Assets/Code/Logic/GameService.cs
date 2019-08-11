@@ -1,8 +1,6 @@
 ﻿namespace Assets.Code.Logic
 {
     using Assets.Code.GUI;
-    using System;
-    using System.Collections;
     using UnityEngine;
 
     public class GameService

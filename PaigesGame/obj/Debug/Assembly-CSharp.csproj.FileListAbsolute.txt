@@ -278,3 +278,9 @@ C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Unity.TextMeshPro.p
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\Unity.Analytics.DataPrivacy.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEditor.XR.LegacyInputHelpers.pdb
 C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\UnityEngine.WebGLModule.dll
+C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-hlapi.Editor.dll
+C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-hlapi.Runtime.dll
+C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-weaver.Editor.dll
+C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-hlapi.Editor.pdb
+C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-weaver.Editor.pdb
+C:\Users\Matt\Documents\PaigesGame\PaigesGame\Temp\bin\Debug\com.unity.multiplayer-hlapi.Runtime.pdb
