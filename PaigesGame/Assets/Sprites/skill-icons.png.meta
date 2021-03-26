@@ -1,81 +1,219 @@
 fileFormatVersion: 2
 guid: 81e54571afdda464a97d215725fe20b6
-timeCreated: 1557081324
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: skill-icons_0
-    21300002: skill-icons_1
-    21300004: skill-icons_2
-    21300006: skill-icons_3
-    21300008: skill-icons_4
-    21300010: skill-icons_5
-    21300012: skill-icons_6
-    21300014: skill-icons_7
-    21300016: skill-icons_8
-    21300018: skill-icons_9
-    21300020: skill-icons_10
-    21300022: skill-icons_11
-    21300024: skill-icons_12
-    21300026: skill-icons_13
-    21300028: skill-icons_14
-    21300030: skill-icons_15
-    21300032: skill-icons_16
-    21300034: skill-icons_17
-    21300036: skill-icons_18
-    21300038: skill-icons_19
-    21300040: skill-icons_20
-    21300042: skill-icons_21
-    21300044: skill-icons_22
-    21300046: skill-icons_23
-    21300048: skill-icons_24
-    21300050: skill-icons_25
-    21300052: skill-icons_26
-    21300054: skill-icons_27
-    21300056: skill-icons_28
-    21300058: skill-icons_29
-    21300060: skill-icons_30
-    21300062: skill-icons_31
-    21300064: skill-icons_32
-    21300066: skill-icons_33
-    21300068: skill-icons_34
-    21300070: skill-icons_35
-    21300072: skill-icons_36
-    21300074: skill-icons_37
-    21300076: skill-icons_38
-    21300078: skill-icons_39
-    21300080: skill-icons_40
-    21300082: skill-icons_41
-    21300084: skill-icons_42
-    21300086: skill-icons_43
-    21300088: skill-icons_44
-    21300090: skill-icons_45
-    21300092: skill-icons_46
-    21300094: skill-icons_47
-    21300096: skill-icons_48
-    21300098: skill-icons_49
-    21300100: skill-icons_50
-    21300102: skill-icons_51
-    21300104: skill-icons_52
-    21300106: skill-icons_53
-    21300108: skill-icons_54
-    21300110: skill-icons_55
-    21300112: skill-icons_56
-    21300114: skill-icons_57
-    21300116: skill-icons_58
-    21300118: skill-icons_59
-    21300120: skill-icons_60
-    21300122: skill-icons_61
-    21300124: skill-icons_62
-    21300126: skill-icons_63
-    21300128: skill-icons_64
-    21300130: skill-icons_65
-    21300132: skill-icons_66
-    21300134: skill-icons_67
-    21300136: skill-icons_68
-    21300138: skill-icons_69
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: skill-icons_0
+  - first:
+      213: 21300002
+    second: skill-icons_1
+  - first:
+      213: 21300004
+    second: skill-icons_2
+  - first:
+      213: 21300006
+    second: skill-icons_3
+  - first:
+      213: 21300008
+    second: skill-icons_4
+  - first:
+      213: 21300010
+    second: skill-icons_5
+  - first:
+      213: 21300012
+    second: skill-icons_6
+  - first:
+      213: 21300014
+    second: skill-icons_7
+  - first:
+      213: 21300016
+    second: skill-icons_8
+  - first:
+      213: 21300018
+    second: skill-icons_9
+  - first:
+      213: 21300020
+    second: skill-icons_10
+  - first:
+      213: 21300022
+    second: skill-icons_11
+  - first:
+      213: 21300024
+    second: skill-icons_12
+  - first:
+      213: 21300026
+    second: skill-icons_13
+  - first:
+      213: 21300028
+    second: skill-icons_14
+  - first:
+      213: 21300030
+    second: skill-icons_15
+  - first:
+      213: 21300032
+    second: skill-icons_16
+  - first:
+      213: 21300034
+    second: skill-icons_17
+  - first:
+      213: 21300036
+    second: skill-icons_18
+  - first:
+      213: 21300038
+    second: skill-icons_19
+  - first:
+      213: 21300040
+    second: skill-icons_20
+  - first:
+      213: 21300042
+    second: skill-icons_21
+  - first:
+      213: 21300044
+    second: skill-icons_22
+  - first:
+      213: 21300046
+    second: skill-icons_23
+  - first:
+      213: 21300048
+    second: skill-icons_24
+  - first:
+      213: 21300050
+    second: skill-icons_25
+  - first:
+      213: 21300052
+    second: skill-icons_26
+  - first:
+      213: 21300054
+    second: skill-icons_27
+  - first:
+      213: 21300056
+    second: skill-icons_28
+  - first:
+      213: 21300058
+    second: skill-icons_29
+  - first:
+      213: 21300060
+    second: skill-icons_30
+  - first:
+      213: 21300062
+    second: skill-icons_31
+  - first:
+      213: 21300064
+    second: skill-icons_32
+  - first:
+      213: 21300066
+    second: skill-icons_33
+  - first:
+      213: 21300068
+    second: skill-icons_34
+  - first:
+      213: 21300070
+    second: skill-icons_35
+  - first:
+      213: 21300072
+    second: skill-icons_36
+  - first:
+      213: 21300074
+    second: skill-icons_37
+  - first:
+      213: 21300076
+    second: skill-icons_38
+  - first:
+      213: 21300078
+    second: skill-icons_39
+  - first:
+      213: 21300080
+    second: skill-icons_40
+  - first:
+      213: 21300082
+    second: skill-icons_41
+  - first:
+      213: 21300084
+    second: skill-icons_42
+  - first:
+      213: 21300086
+    second: skill-icons_43
+  - first:
+      213: 21300088
+    second: skill-icons_44
+  - first:
+      213: 21300090
+    second: skill-icons_45
+  - first:
+      213: 21300092
+    second: skill-icons_46
+  - first:
+      213: 21300094
+    second: skill-icons_47
+  - first:
+      213: 21300096
+    second: skill-icons_48
+  - first:
+      213: 21300098
+    second: skill-icons_49
+  - first:
+      213: 21300100
+    second: skill-icons_50
+  - first:
+      213: 21300102
+    second: skill-icons_51
+  - first:
+      213: 21300104
+    second: skill-icons_52
+  - first:
+      213: 21300106
+    second: skill-icons_53
+  - first:
+      213: 21300108
+    second: skill-icons_54
+  - first:
+      213: 21300110
+    second: skill-icons_55
+  - first:
+      213: 21300112
+    second: skill-icons_56
+  - first:
+      213: 21300114
+    second: skill-icons_57
+  - first:
+      213: 21300116
+    second: skill-icons_58
+  - first:
+      213: 21300118
+    second: skill-icons_59
+  - first:
+      213: 21300120
+    second: skill-icons_60
+  - first:
+      213: 21300122
+    second: skill-icons_61
+  - first:
+      213: 21300124
+    second: skill-icons_62
+  - first:
+      213: 21300126
+    second: skill-icons_63
+  - first:
+      213: 21300128
+    second: skill-icons_64
+  - first:
+      213: 21300130
+    second: skill-icons_65
+  - first:
+      213: 21300132
+    second: skill-icons_66
+  - first:
+      213: 21300134
+    second: skill-icons_67
+  - first:
+      213: 21300136
+    second: skill-icons_68
+  - first:
+      213: 21300138
+    second: skill-icons_69
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -93,6 +231,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -103,7 +243,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: -1
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -115,18 +255,21 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -135,7 +278,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -144,7 +290,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Android
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -153,7 +302,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: WebGL
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -162,6 +314,8 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -179,6 +333,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_1
       rect:
@@ -193,6 +354,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_2
       rect:
@@ -207,6 +375,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_3
       rect:
@@ -221,6 +396,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_4
       rect:
@@ -235,6 +417,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_5
       rect:
@@ -249,6 +438,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_6
       rect:
@@ -263,6 +459,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_7
       rect:
@@ -277,6 +480,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_8
       rect:
@@ -291,6 +501,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_9
       rect:
@@ -305,6 +522,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_10
       rect:
@@ -319,6 +543,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_11
       rect:
@@ -333,6 +564,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_12
       rect:
@@ -347,6 +585,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_13
       rect:
@@ -361,6 +606,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_14
       rect:
@@ -375,6 +627,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_15
       rect:
@@ -389,6 +648,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_16
       rect:
@@ -403,6 +669,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_17
       rect:
@@ -417,6 +690,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_18
       rect:
@@ -431,6 +711,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_19
       rect:
@@ -445,6 +732,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_20
       rect:
@@ -459,6 +753,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_21
       rect:
@@ -473,6 +774,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_22
       rect:
@@ -487,6 +795,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_23
       rect:
@@ -501,6 +816,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_24
       rect:
@@ -515,6 +837,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_25
       rect:
@@ -529,6 +858,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_26
       rect:
@@ -543,6 +879,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_27
       rect:
@@ -557,6 +900,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_28
       rect:
@@ -571,6 +921,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_29
       rect:
@@ -585,6 +942,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_30
       rect:
@@ -599,6 +963,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_31
       rect:
@@ -613,6 +984,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_32
       rect:
@@ -627,6 +1005,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_33
       rect:
@@ -641,6 +1026,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_34
       rect:
@@ -655,6 +1047,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_35
       rect:
@@ -669,6 +1068,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_36
       rect:
@@ -683,6 +1089,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_37
       rect:
@@ -697,6 +1110,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_38
       rect:
@@ -711,6 +1131,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_39
       rect:
@@ -725,6 +1152,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_40
       rect:
@@ -739,6 +1173,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_41
       rect:
@@ -753,6 +1194,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_42
       rect:
@@ -767,6 +1215,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_43
       rect:
@@ -781,6 +1236,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_44
       rect:
@@ -795,6 +1257,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_45
       rect:
@@ -809,6 +1278,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_46
       rect:
@@ -823,6 +1299,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_47
       rect:
@@ -837,6 +1320,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_48
       rect:
@@ -851,6 +1341,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_49
       rect:
@@ -865,6 +1362,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_50
       rect:
@@ -879,6 +1383,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_51
       rect:
@@ -893,6 +1404,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_52
       rect:
@@ -907,6 +1425,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_53
       rect:
@@ -921,6 +1446,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_54
       rect:
@@ -935,6 +1467,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_55
       rect:
@@ -949,6 +1488,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_56
       rect:
@@ -963,6 +1509,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_57
       rect:
@@ -977,6 +1530,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_58
       rect:
@@ -991,6 +1551,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_59
       rect:
@@ -1005,6 +1572,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_60
       rect:
@@ -1019,6 +1593,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_61
       rect:
@@ -1033,6 +1614,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_62
       rect:
@@ -1047,6 +1635,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_63
       rect:
@@ -1061,6 +1656,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_64
       rect:
@@ -1075,6 +1677,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_65
       rect:
@@ -1089,6 +1698,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_66
       rect:
@@ -1103,6 +1719,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_67
       rect:
@@ -1117,6 +1740,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_68
       rect:
@@ -1131,6 +1761,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: skill-icons_69
       rect:
@@ -1145,9 +1782,26 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
