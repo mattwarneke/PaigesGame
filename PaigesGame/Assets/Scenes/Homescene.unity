@@ -17391,7 +17391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1774611394502984, guid: 1fd8956ee327e8841aa1876ab9d55b7f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4141911079786282, guid: 1fd8956ee327e8841aa1876ab9d55b7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17594,6 +17594,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_FontStyle
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114531141964317100, guid: 1fd8956ee327e8841aa1876ab9d55b7f,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 212536364292919000, guid: 1fd8956ee327e8841aa1876ab9d55b7f,
         type: 3}
